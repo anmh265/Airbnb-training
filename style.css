@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+@font-face {
+    font-family: font-book;
+    src: url('https://a0.muscache.com/airbnb/static/airbnb-dls-web/build/fonts/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2');
+}
+
+@font-face {
+    font-family: font-medium;
+    src: url('https://a0.muscache.com/airbnb/static/airbnb-dls-web/build/fonts/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2');
+}
+@font-face {
+    font-family: font-bold;
+    src: url('https://a0.muscache.com/airbnb/static/airbnb-dls-web/build/fonts/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2');
+}
+
+body{
+    font-family: font-book, font-medium, font-bold;
+}
+.header-input-padding{
+    padding: 14px 24px 0 24px;
+}
+.header-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.5px solid rgb(0, 0, 0, 0.08);
+    border-radius: 30px;
+    min-height: 56px;
+    min-width: 285px;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.1);
+}
+.header-input-right{
+    display: flex;
+    align-items: center;
+    flex: 1 1;
+}
+.header-input-search{
+    padding: 0 16px 0 20px;
+}
+.header-input-location{
+    width: 76%;
+    font-family: font-book;
+}
+.header-input-location p{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.03ch;
+    color: #222222;
+}
+.header-input-anywhere{
+    display: flex;
+    width: 97%;
+    color: #717171;
+}
+.anywhere, .anyweek, .guests{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.header-input-anywhere span{
+    font-size: 12px;
+}
+.dot{
+    padding-inline: 5px;
+}
+.header-input-filter{
+    border: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 9px;
+    transform: translateX(-14px);
+}
+.web{
+    display: none;
+}
+
+.scroll-list{
+    margin-top: 12px;
+    display: flex;    
+    gap: 21px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.08);
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.scroll-item{
+    padding-top: 4px;
+    padding-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-width: 64px;
+}
+.scroll-item .key{
+    width: 24px;
+    height: 24px;
+}
+.scroll-item .key-text{
+    font-size: 12px;
+    white-space: nowrap;
+    letter-spacing: 0.04ch;
+}
+.header-bottom{
+    display: none;
+}
+
+@media screen and (min-width:375px) {
+    .header-input-filter{
+        transform: translateX(-10px);
+    }
+}
+
+@media screen and (min-width:744px) {
+    .header-mobile{
+        display: none;
+    }
+    .web{
+        display: block;
+        background-color: #f7f7f7;
+    }
+    .header-web-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-web-top-left{
+        flex: 1 1;
+    }
+    .header-web-top-left{
+        padding-top: 23px;
+        padding-bottom: 21px;
+        margin-left: 40px;
+    }
+    .header-web-top-left .intro{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.02ch;
+    }
+    .play-img img{
+        height: 30px;
+        width: 53px;
+        border-radius: 4px;
+        margin-right: 16px;
+    }
+    .play-film{
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+    }
+    .play-img{
+        padding: 4px 16px;
+        display: flex;
+        align-items: center;
+    }
+    .play-film .line{
+        height: 30px;
+        border-left: 1px solid #dddddd;
+    }
+    .explore{
+        padding: 4px 16px;
+    }
+    .header-web-top-right{
+        margin-right: 23px;
+    }
+    .header-bottom{
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 40px;
+        height: 80px;
+    }
+    .airbnb-logo svg{
+        color: #ff385c;
+    }
+    .header-bottom-left, .header-bottom-right{
+        display: flex;
+        align-items: center;
+        flex: 1 1;
+    }
+    .header-bottom-left{
+        flex: 1 1;
+    }
+    .header-bottom-anywhere{
+        margin-inline: 24px;
+        border: 1px solid #dddddd;
+        border-radius: 25px;
+        padding: 6px 5px 6px 15px;
+        font-size: 14px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .header-bottom-anywhere span{
+        margin-inline: 5px;
+    }
+    .header-bottom-anywhere .bottom{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 19%;
+    }
+    .bottom-anywhere , .bottom-anyweek{
+        font-weight: 600;
+    }
+    .bottom-add{
+        color: #717171;
+    }
+    .search{
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ff385c;
+        stroke: white;
+        margin-left: 10px;
+    }
+    .next-line{
+        height: 30px;
+        width: 1px;
+        border: 1px solid #dddddd;
+    }
+    .header-bottom-right{
+        justify-content: flex-end;
+    }
+    .login{
+        display: flex;
+        align-items: center;
+    }
+    .home{
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.02ch;
+        color: #222222;
+        margin-left: 12px;
+    }
+    .globe{
+        padding: 12px;
+        margin-right: 9px;
+    }
+    .login{
+        padding: 5px 5px 5px 12px;
+        border: 1px solid #dddddd;
+        border-radius: 25px;
+    }
+    .login .hamburger{
+        margin-right: 11px;
+    }
+    .account-login{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header-bottom-anywhere{
+        width: 343px;
+    }
+    .home{
+        margin-right: 12px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .header-web-top{
+        margin-inline: 40px;
+    }
+    .header-web-top-left .intro{
+        font-size: 20px;
+        letter-spacing: -0.01ch;
+    }
+    .explore{
+        letter-spacing: -0.04ch;
+    }
+}
