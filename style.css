@@ -175,7 +175,6 @@ body{
         margin-right: 23px;
     }
     .header-bottom{
-        display: block;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -204,6 +203,8 @@ body{
         align-items: center;
         flex-wrap: nowrap;
         justify-content: space-around;
+        box-shadow: 0 1px 2px rgb(0, 0, 0, 0.08), 
+                    0 4px 12px rgb(0, 0, 0, 0.05);
     }
     .header-bottom-anywhere span{
         margin-inline: 5px;
@@ -245,7 +246,7 @@ body{
         font-weight: 600;
         letter-spacing: 0.02ch;
         color: #222222;
-        margin-left: 12px;
+        margin-right: 12px;
     }
     .globe{
         padding: 12px;
@@ -255,13 +256,26 @@ body{
         padding: 5px 5px 5px 12px;
         border: 1px solid #dddddd;
         border-radius: 25px;
+        position: relative;
     }
     .login .hamburger{
-        margin-right: 11px;
+        margin-right: 12px;
     }
     .account-login{
         height: 30px;
         width: 30px;
+        position: relative;
+    }
+    .login::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 2px;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #ff385c;
+        border: 2px solid white;
     }
 }
 
@@ -275,6 +289,24 @@ body{
     }
 }
 
+@media screen and (min-width:950px) {
+    .airbnb-logo{
+        flex: 1 0 140px;
+    }
+    .header-bottom-left{
+        flex-basis: 43%;
+        justify-content: space-between;
+        margin-right: 10px;
+    }
+    .header-bottom-anywhere {
+        width: 352px;
+    }
+    .header-bottom-anywhere .bottom {
+        text-overflow: unset;
+        overflow: unset;
+    }
+}
+
 @media screen and (min-width:1440px) {
     .header-web-top{
         margin-inline: 40px;
@@ -285,5 +317,17 @@ body{
     }
     .explore{
         letter-spacing: -0.04ch;
+    }
+    .header-bottom{
+        padding-inline: 80px;
+    }
+    .header-bottom-left{
+        flex-basis: 32%;
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .header-bottom-left{
+        flex-basis: 25%;
     }
 }
